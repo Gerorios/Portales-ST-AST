@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Portal SER&TEC SAS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Barlow+Condensed:wght@500;700;800;900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/Assets/StyleSt.css">
+</head>
+<body>
+<header class="header">
+  <div class="header-logo">
+   <a href="/Index.html"> <img class="brand-logo-img" src="/Assets/Img/Logo.jpeg" alt="SER&TEC SAS"/></a>
+  </div>
+  <div class="header-sep"></div>
+  <div class="header-center">
+    <div class="portal-eyebrow">Plataforma interna</div>
+    <div class="portal-title">Portal de <span>herramientas</span></div>
+  </div>
+  <div class="header-spacer"></div>
+  <div class="header-right">
+    <div class="update-meta">
+      <div class="update-label">Última actualización</div>
+      <div class="update-date" id="lastUpdate">—</div>
+    </div>
+    <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" aria-label="Cambiar tema" title="Modo oscuro / claro">
+      <svg id="themeIcon" width="16" height="16" viewBox="0 0 17 17" fill="none">
+        <circle cx="8.5" cy="8.5" r="3.5" fill="currentColor"/>
+        <line x1="8.5" y1="1" x2="8.5" y2="2.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="8.5" y1="14.2" x2="8.5" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="1" y1="8.5" x2="2.8" y2="8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="14.2" y1="8.5" x2="16" y2="8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="3.4" y1="3.4" x2="4.6" y2="4.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="12.4" y1="12.4" x2="13.6" y2="13.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="12.4" y1="4.6" x2="13.6" y2="3.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="3.4" y1="13.6" x2="4.6" y2="12.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+</header>
+<section class="hero">
+    <div class="hero-bg" id="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="hero-left">
+            <div style="color: var(--gold); font-weight: 800; font-size: 10px; letter-spacing: 3px; margin-bottom: 8px;">UNIDAD DE DESARROLLO</div>
+            <h1 class="hero-title">PANEL <em>OPERATIVO</em></h1>
+        </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">4</div><div class="stat-lbl">Sheets</div></div>
+      <div class="stat"><div class="stat-num">3</div><div class="stat-lbl">Forms</div></div>
+      <div class="stat"><div class="stat-num">3</div><div class="stat-lbl">Apps</div></div>
+      <div class="stat"><div class="stat-num">1</div><div class="stat-lbl">Power BI</div></div>
+      <div class="stat"><div class="stat-num">3</div><div class="stat-lbl">Mapas</div></div>
+      <div class="stat total"><div class="stat-num">14</div><div class="stat-lbl">Total</div></div>
+    </div>
+    </div>
+</section>
+
+<div class="search-bar">
+  <div class="search-input-wrap">
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.5"/>
+      <line x1="10.5" y1="10.5" x2="14" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    <input type="search" id="searchInput" placeholder="Buscar herramienta..." oninput="applyFilters()" aria-label="Buscar herramientas"/>
+  </div>
+  <div class="filter-chips">
+    <button class="chip active" onclick="setFilter('all',this)">Todos</button>
+    <button class="chip" onclick="setFilter('sheets',this)">Sheets</button>
+    <button class="chip" onclick="setFilter('forms',this)">Forms</button>
+    <button class="chip" onclick="setFilter('apps',this)">Apps web</button>
+    <button class="chip" onclick="setFilter('bi',this)">Power BI</button>
+    <button class="chip" onclick="setFilter('maps',this)">Mapas</button>
+  </div>
+</div>
+
+<main class="main" id="mainContent">
+
+  <!-- GOOGLE SHEETS -->
+  <div class="section-header" id="sec-sheets">
+    <div class="section-icon icon-sheets">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2.5" fill="#1D9E75"/><line x1="2" y1="6.3" x2="14" y2="6.3" stroke="white" stroke-width="1.1"/><line x1="2" y1="10" x2="14" y2="10" stroke="white" stroke-width="1.1"/><line x1="6.3" y1="2" x2="6.3" y2="14" stroke="white" stroke-width="1.1"/></svg>
+    </div>
+    <span class="section-name">Google Sheets</span>
+    <span class="section-badge">4</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="cards-grid" id="grid-sheets">
+    <a href="https://docs.google.com/spreadsheets/d/1MUc5G69lzrjxWIoabqfdJrZ8bpuobHi_QDQRiNgBeUk/edit?resourcekey=&gid=1556861262#gid=1556861262" target="_blank" rel="noopener" class="tool-card" data-cat="sheets" data-name="respuestas carga de combustible">
+      <div class="card-platform"><span class="dot dot-sheets"></span>Google Sheets</div>
+      <div class="card-name">Respuestas carga de combustible</div>
+      <div class="card-desc">Registro de respuestas del formulario de carga de combustible del equipo</div>
+      <div class="card-footer"><span class="tag tag-sheets">Sheets</span><span class="card-arrow">↗</span></div>
+    </a>
+    <a href="https://docs.google.com/spreadsheets/d/1w2joEikxUWWxRF7XsZEpE6-qKQ-k1U7NfGK1elOq5RI/edit?gid=2062498879#gid=2062498879" target="_blank" rel="noopener" class="tool-card" data-cat="sheets" data-name="relevamiento de tareas">
+      <div class="card-platform"><span class="dot dot-sheets"></span>Google Sheets</div>
+      <div class="card-name">Relevamiento de tareas</div>
+      <div class="card-desc">Planilla de seguimiento y relevamiento de tareas del equipo</div>
+      <div class="card-footer"><span class="tag tag-sheets">Sheets</span><span class="card-arrow">↗</span></div>
+    </a>
+    <a href="https://docs.google.com/spreadsheets/d/1EWuCxcK12temQSCSnQ57KB0H1-LQXrabPiFybCAXXNU/edit?usp=sharing" target="_blank" rel="noopener" class="tool-card" data-cat="sheets" data-name="respaldo respuestas oml">
+      <div class="card-platform"><span class="dot dot-sheets"></span>Google Sheets</div>
+      <div class="card-name">Respaldo respuestas OML</div>
+      <div class="card-desc">Respaldo de datos de operaciones OML</div>
+      <div class="card-footer"><span class="tag tag-sheets">Sheets</span><span class="card-arrow">↗</span></div>
+    </a>
+    <a href="https://docs.google.com/spreadsheets/d/1UDkFsMRyxDHo5DPv4efKr_m-DDC8O7Qz1hEeiGSOLaA/edit?gid=1315067209#gid=1315067209" target="_blank" rel="noopener" class="tool-card" data-cat="sheets" data-name="respaldo op domiciliaria">
+      <div class="card-platform"><span class="dot dot-sheets"></span>Google Sheets</div>
+      <div class="card-name">Respaldo OP Domiciliaria</div>
+      <div class="card-desc">Respaldo de respuestas de operación domiciliaria</div>
+      <div class="card-footer"><span class="tag tag-sheets">Sheets</span><span class="card-arrow">↗</span></div>
+    </a>
+    <div class="add-card" role="button" tabindex="0"><span class="add-icon">+</span><span class="add-label">Agregar Sheets</span></div>
+  </div>
+
+  <!-- GOOGLE FORMS -->
+  <div class="section-header" id="sec-forms">
+    <div class="section-icon icon-forms">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="1" width="12" height="14" rx="2.5" fill="#E26736"/><line x1="5" y1="5.5" x2="11" y2="5.5" stroke="white" stroke-width="1.2"/><line x1="5" y1="8.5" x2="11" y2="8.5" stroke="white" stroke-width="1.2"/><line x1="5" y1="11.5" x2="8.5" y2="11.5" stroke="white" stroke-width="1.2"/></svg>
+    </div>
+    <span class="section-name">Google Forms</span>
+    <span class="section-badge">3</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="cards-grid" id="grid-forms">
+    <a href="https://forms.gle/3c1uM5xpQnr5KEjd8" target="_blank" rel="noopener" class="tool-card" data-cat="forms" data-name="formulario carga de combustible">
+      <div class="card-platform"><span class="dot dot-forms"></span>Google Forms</div>
+      <div class="card-name">Formulario de carga de combustible</div>
+      <div class="card-desc">Formulario para registro de carga de combustible por operario</div>
+      <div class="card-footer"><span class="tag tag-forms">Forms</span><span class="card-arrow">↗</span></div>
+    </a>
+    <a href="https://docs.google.com/forms/d/1H2h_EXITPso78XRnwB5TNhUNphk_Jhti7wII7KfyRNk/edit" target="_blank" rel="noopener" class="tool-card" data-cat="forms" data-name="formulario respaldo op dom">
+      <div class="card-platform"><span class="dot dot-forms"></span>Google Forms</div>
+      <div class="card-name">Formulario Respaldo OP DOM</div>
+      <div class="card-desc">Formulario de respaldo para operación domiciliaria</div>
+      <div class="card-footer"><span class="tag tag-forms">Forms</span><span class="card-arrow">↗</span></div>
+    </a>
+    <a href="https://forms.gle/8EdqRj9dNFEwBVUA6" target="_blank" rel="noopener" class="tool-card" data-cat="forms" data-name="formulario respaldo oml">
+      <div class="card-platform"><span class="dot dot-forms"></span>Google Forms</div>
+      <div class="card-name">Formulario Respaldo OML</div>
+      <div class="card-desc">Formulario de respaldo para operaciones OML</div>
+      <div class="card-footer"><span class="tag tag-forms">Forms</span><span class="card-arrow">↗</span></div>
+    </a>
+    <div class="add-card" role="button" tabindex="0"><span class="add-icon">+</span><span class="add-label">Agregar Forms</span></div>
+  </div>
+
+  <!-- APLICACIONES WEB -->
+  <div class="section-header" id="sec-apps">
+    <div class="section-icon icon-apps">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#9a7000" stroke-width="1.5"/><ellipse cx="8" cy="8" rx="2.5" ry="6" stroke="#9a7000" stroke-width="1.1"/><line x1="2" y1="8" x2="14" y2="8" stroke="#9a7000" stroke-width="1.1"/></svg>
+    </div>
+    <span class="section-name">Aplicaciones Web</span>
+    <span class="section-badge">3</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="cards-grid" id="grid-apps">
+    <a href="https://sertec-oml-retorno.netlify.app/" target="_blank" rel="noopener" class="tool-card" data-cat="apps" data-name="retorno oml">
+      <div class="card-platform"><span class="dot dot-apps"></span>App Web</div>
+      <div class="card-name">Retorno OML</div>
+      <div class="card-desc">Gestión y registro de retorno en operaciones OML</div>
+      <div class="card-footer"><span class="tag tag-apps">App Web</span><span class="card-arrow">↗</span></div>
+    </a>
+    <a href="https://sertec-combustible.netlify.app/" target="_blank" rel="noopener" class="tool-card" data-cat="apps" data-name="cruce combustible">
+      <div class="card-platform"><span class="dot dot-apps"></span>App Web</div>
+      <div class="card-name">Cruce Combustible</div>
+      <div class="card-desc">Cruce y validación de datos de carga de combustible</div>
+      <div class="card-footer"><span class="tag tag-apps">App Web</span><span class="card-arrow">↗</span></div>
+    </a>
+    <a href="https://sertechoras.netlify.app/" target="_blank" rel="noopener" class="tool-card" data-cat="apps" data-name="consulta horas">
+      <div class="card-platform"><span class="dot dot-apps"></span>App Web</div>
+      <div class="card-name">Consulta Horas</div>
+      <div class="card-desc">Consulta de horas trabajadas por equipo o personal</div>
+      <div class="card-footer"><span class="tag tag-apps">App Web</span><span class="card-arrow">↗</span></div>
+    </a>
+    <div class="add-card" role="button" tabindex="0"><span class="add-icon">+</span><span class="add-label">Agregar App</span></div>
+  </div>
+
+  <!-- POWER BI -->
+  <div class="section-header" id="sec-bi">
+    <div class="section-icon icon-bi">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="9" width="3" height="5.5" rx="1.2" fill="#7F77DD"/><rect x="6.5" y="5.5" width="3" height="9" rx="1.2" fill="#7F77DD"/><rect x="11.5" y="1.5" width="3" height="13" rx="1.2" fill="#7F77DD"/></svg>
+    </div>
+    <span class="section-name">Power BI — Tableros</span>
+    <span class="section-badge">1</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="cards-grid" id="grid-bi">
+    <a href="https://app.powerbi.com/reportEmbed?reportId=da3cfc9e-4358-49d5-8e6c-845e02f648ef&autoAuth=true&ctid=08487b0c-70cd-473c-80da-193f2f00be92" target="_blank" rel="noopener" class="tool-card" data-cat="bi" data-name="tableros k2 k6 k12">
+      <div class="card-platform"><span class="dot dot-bi"></span>Power BI</div>
+      <div class="card-name">Tableros K2 — K6 — K12</div>
+      <div class="card-desc">Dashboard de indicadores y KPIs por equipos K2, K6 y K12</div>
+      <div class="card-footer"><span class="tag tag-bi">Power BI</span><span class="card-arrow">↗</span></div>
+    </a>
+    <div class="add-card" role="button" tabindex="0"><span class="add-icon">+</span><span class="add-label">Agregar Tablero</span></div>
+  </div>
+
+  <!-- MAPAS -->
+  <div class="section-header" id="sec-maps">
+    <div class="section-icon icon-maps">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.79 2 4 3.79 4 6c0 3.32 4 8.5 4 8.5S12 9.32 12 6c0-2.21-1.79-4-4-4z" fill="#0F6E56"/><circle cx="8" cy="6" r="1.6" fill="white"/></svg>
+    </div>
+    <span class="section-name">MyMaps — Mapas personalizados</span>
+    <span class="section-badge">3</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="cards-grid" id="grid-maps">
+    <a href="https://www.google.com/maps/d/u/0/edit?mid=1slny52Z7iyRBkps3TTvKg4judpH5Pzk&usp=sharing" target="_blank" rel="noopener" class="tool-card" data-cat="maps" data-name="mapas erp gasnor">
+      <div class="card-platform"><span class="dot dot-maps"></span>MyMaps</div>
+      <div class="card-name">Mapas ERP GASNOR</div>
+      <div class="card-desc">Puntos de interés y zonas geográficas del ERP Gasnor</div>
+      <div class="card-footer"><span class="tag tag-maps">Mapa</span><span class="card-arrow">↗</span></div>
+    </a>
+    <a href="https://www.google.com/maps/d/u/0/edit?mid=19qLbpjMAfexrgRQpkvnGzDgu29tqbAI&usp=sharing" target="_blank" rel="noopener" class="tool-card" data-cat="maps" data-name="mapas upccis odorizacion">
+      <div class="card-platform"><span class="dot dot-maps"></span>MyMaps</div>
+      <div class="card-name">Mapas UPCCIS y Odorización</div>
+      <div class="card-desc">Visualización geográfica de UPCCIS y puntos de odorización</div>
+      <div class="card-footer"><span class="tag tag-maps">Mapa</span><span class="card-arrow">↗</span></div>
+    </a>
+    <a href="https://www.google.com/maps/d/u/0/edit?mid=1b9uzkKf9mTvuLu42rzuyKMw0wdICUD8&usp=sharing" target="_blank" rel="noopener" class="tool-card" data-cat="maps" data-name="mapas inspecciones gnc">
+      <div class="card-platform"><span class="dot dot-maps"></span>MyMaps</div>
+      <div class="card-name">Mapas Inspecciones GNC</div>
+      <div class="card-desc">Georreferenciación de inspecciones de estaciones GNC</div>
+      <div class="card-footer"><span class="tag tag-maps">Mapa</span><span class="card-arrow">↗</span></div>
+    </a>
+    <div class="add-card" role="button" tabindex="0"><span class="add-icon">+</span><span class="add-label">Agregar Mapa</span></div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div>© 2025 <span class="footer-brand">SER&amp;TEC SAS</span> — Portal interno de herramientas</div>
+  <div>14 herramientas disponibles</div>
+</footer>
+
+
+
+<script src="/Functions/scriptSt.js"></script>
+</body>
+</html>

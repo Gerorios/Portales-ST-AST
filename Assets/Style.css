@@ -1,0 +1,42 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Montserrat',sans-serif; }
+  .portal { position:relative; width:100%; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; overflow:hidden; }
+  .bg-split { position:absolute; inset:0; display:flex; }
+  .bg-left { flex:1; background:linear-gradient(150deg,#6b0f08 0%,#b02a1e 50%,#8a1810 100%); position:relative; overflow:hidden; }
+  .bg-right { flex:1; background:linear-gradient(210deg,#111 0%,#2e2e2e 50%,#444 100%); position:relative; overflow:hidden; }
+  .bg-left::before { content:''; position:absolute; inset:0; background-image:repeating-linear-gradient(45deg,rgba(255,255,255,0.025) 0,rgba(255,255,255,0.025) 1px,transparent 1px,transparent 48px); }
+  .bg-right::before { content:''; position:absolute; inset:0; background-image:repeating-linear-gradient(-45deg,rgba(240,180,41,0.035) 0,rgba(240,180,41,0.035) 1px,transparent 1px,transparent 48px); }
+  .bg-left::after { content:''; position:absolute; width:520px; height:520px; border-radius:50%; border:70px solid rgba(255,255,255,0.04); bottom:-160px; left:-120px; }
+  .bg-right::after { content:''; position:absolute; width:420px; height:420px; border-radius:50%; border:55px solid rgba(240,180,41,0.06); top:-110px; right:-90px; }
+  .divider { position:absolute; top:0; left:50%; width:5px; height:100%; background:linear-gradient(to bottom,rgba(255,255,255,0.6),rgba(255,255,255,0.2),rgba(255,255,255,0.6)); transform:translateX(-50%) skewX(-2deg); z-index:2; box-shadow:0 0 24px rgba(255,255,255,0.2); }
+  .overlay { position:absolute; inset:0; background:rgba(0,0,0,0.42); z-index:1; }
+  .content { position:relative; z-index:10; display:flex; flex-direction:column; align-items:center; padding:40px 20px; width:100%; max-width:900px; }
+  .logos-row { display:flex; align-items:center; justify-content:center; gap:32px; margin-bottom:28px; flex-wrap:wrap; }
+  .logo-box { background:rgba(255,255,255,0.10); backdrop-filter:blur(8px); border-radius:14px; padding:10px 18px; border:1px solid rgba(255,255,255,0.18); display:flex; align-items:center; justify-content:center; }
+  .logo-box.ast { border-color:rgba(192,57,43,0.55); }
+  .logo-box.ser { border-color:rgba(240,180,41,0.45); }
+  .logo-box img { display:block; mix-blend-mode:multiply; }
+  .logo-sep { color:rgba(255,255,255,0.35); font-size:26px; font-weight:200; }
+  .title-block { text-align:center; margin-bottom:38px; }
+  .title-sub { font-size:10px; font-weight:600; letter-spacing:4px; color:rgba(255,255,255,0.45); text-transform:uppercase; margin-bottom:8px; }
+  .title-main { font-size:clamp(20px,3.8vw,32px); font-weight:800; color:#fff; text-transform:uppercase; letter-spacing:1px; line-height:1.2; text-shadow:0 2px 20px rgba(0,0,0,0.6); }
+  .title-main .ast { color:#e05040; }
+  .title-main .ser { color:#f0b429; }
+  .title-main .amp { color:rgba(255,255,255,0.45); font-weight:300; margin:0 6px; }
+  .title-tag { margin-top:10px; font-size:12px; color:rgba(255,255,255,0.45); font-weight:400; letter-spacing:0.4px; }
+  .buttons-row { display:flex; gap:22px; flex-wrap:wrap; justify-content:center; }
+  .portal-btn { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; width:270px; min-height:160px; border:none; border-radius:18px; cursor:pointer; overflow:hidden; transition:transform 0.25s cubic-bezier(.2,1,.3,1),box-shadow 0.25s; text-decoration:none; padding:20px; }
+  .portal-btn:hover { transform:translateY(-7px) scale(1.03); }
+  .btn-ast { background:linear-gradient(145deg,#c0392b,#8a1810); box-shadow:0 8px 32px rgba(192,57,43,0.45),inset 0 1px 0 rgba(255,255,255,0.15); }
+  .btn-ast:hover { box-shadow:0 18px 50px rgba(192,57,43,0.65),inset 0 1px 0 rgba(255,255,255,0.2); }
+  .btn-ser { background:linear-gradient(145deg,#3a3a3a,#181818); box-shadow:0 8px 32px rgba(0,0,0,0.55),inset 0 1px 0 rgba(255,255,255,0.08); border:1px solid rgba(240,180,41,0.3); }
+  .btn-ser:hover { box-shadow:0 18px 50px rgba(240,180,41,0.22),inset 0 1px 0 rgba(255,255,255,0.12); border-color:rgba(240,180,41,0.65); }
+  .btn-logo { height:54px; object-fit:contain; margin-bottom:12px; mix-blend-mode:multiply; filter:brightness(0) invert(1); }
+  .btn-logo.sertec { filter:brightness(0) invert(1); }
+  .btn-name { font-size:16px; font-weight:800; color:#fff; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:3px; }
+  .btn-desc { font-size:10px; color:rgba(255,255,255,0.55); font-weight:500; letter-spacing:0.5px; text-transform:uppercase; }
+  .btn-arrow { position:absolute; bottom:14px; right:18px; font-size:17px; color:rgba(255,255,255,0.3); transition:transform 0.2s,color 0.2s; }
+  .portal-btn:hover .btn-arrow { transform:translateX(4px); color:rgba(255,255,255,0.65); }
+  .footer-note { margin-top:34px; font-size:10px; color:rgba(255,255,255,0.2); letter-spacing:1px; text-transform:uppercase; }

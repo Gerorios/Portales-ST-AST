@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/Assets/Style.css">
+<title>Gestión de Portales · Grupo Asturiana &amp; Sertec</title>
+</head>
+<body>
+<div class="portal">
+  <div class="bg-split"><div class="bg-left"></div><div class="bg-right"></div></div>
+  <div class="divider"></div>
+  <div class="overlay"></div>
+  <div class="content">
+    <div class="title-block">
+      <div class="title-sub">Acceso unificado · Grupo económico</div>
+      <div class="title-main">
+        Gestión de Portales<br>
+        <span class="amp">—</span>Grupo <span class="ast">Asturiana</span><span class="amp">&amp;</span><span class="ser">Sertec</span>
+      </div>
+      <div class="title-tag">Seleccioná tu empresa para acceder al portal correspondiente</div>
+    </div>
+    <div class="buttons-row">
+      <button class="portal-btn btn-ast" onclick="go('asturiana')">
+        <img src="/Assets/Img/Logo Asturiana Sin Letras.webp" alt="">
+                  <div class="btn-name">La Asturiana</div>
+        <div class="btn-desc">Portal de gestión</div>
+        <span class="btn-arrow">→</span>
+      </button>
+      <button class="portal-btn btn-ser" onclick="go('sertec')">
+        <img src="" alt="">        <div class="btn-name">Sertec</div>
+        <div class="btn-desc">Portal de gestión</div>
+        <span class="btn-arrow">→</span>
+      </button>
+    </div>
+    <div class="footer-note">Grupo económico unificado · Acceso interno</div>
+  </div>
+</div>
+<script>
+  const URLS = { asturiana: "Portales/PortalAst.html", sertec: "Portales/PortalSertec.html" };
+  function go(e) { window.location.href = URLS[e]; }
+</script>
+</body>
+</html>

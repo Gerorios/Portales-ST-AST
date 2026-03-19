@@ -40,3 +40,9 @@
   .btn-arrow { position:absolute; bottom:14px; right:18px; font-size:17px; color:rgba(255,255,255,0.3); transition:transform 0.2s,color 0.2s; }
   .portal-btn:hover .btn-arrow { transform:translateX(4px); color:rgba(255,255,255,0.65); }
   .footer-note { margin-top:34px; font-size:10px; color:rgba(255,255,255,0.2); letter-spacing:1px; text-transform:uppercase; }
+  .portal-btn img {
+  width: 100%;
+  height: 250px;        /* ← cambiá este valor */
+  object-fit: contain;
+  margin-bottom: 12px;
+}

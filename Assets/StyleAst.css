@@ -88,6 +88,8 @@
   .card-badge img { height: 14px; width: auto; display: block; }
   .badge-app     { background: #fdf0ef; color: var(--red-dark); }
   .badge-powerbi { background: #fef9e7; color: #9a7d0a; }
+  .badge-sheets  { background: #eafaf1; color: var(--green-dark); }
+  .badge-looker   { background: #fef9e7; color: #1a7a9a; }
 
   .card-name {
     font-family: 'Arial Narrow', Arial, sans-serif; font-weight: 700; font-size: 18px;

@@ -39,4 +39,4 @@
     track.innerHTML = '<div class="birthday-error">No se pudieron cargar los cumpleaños</div>';
   }
 }
-document.addEventListener('DOMContentLoaded', cargarCumpleanos);
+

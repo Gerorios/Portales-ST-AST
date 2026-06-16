@@ -12,7 +12,10 @@ exports.handler = async function () {
     });
 
     const [rows] = await connection.execute(
-      "SELECT apellido_nombre, fecha_nacimiento FROM snuempleados WHERE borrado <> 'S'"
+      `SELECT apellido_nombre, fecha_nacimiento FROM snuempleados
+       WHERE borrado <> 'S'
+       AND fecha_nacimiento IS NOT NULL
+       AND fecha_nacimiento > '1900-01-01'`
     );
 
     const hoy = new Date();
@@ -29,7 +32,7 @@ exports.handler = async function () {
       const diffDias = Math.round((proximo - hoy) / (1000 * 60 * 60 * 24));
 
       return {
-        nombre: row.nombre,
+        nombre: row.apellido_nombre,
         fecha: nacimiento.toLocaleDateString('es-AR', { day: '2-digit', month: '2-digit' }),
         dias_faltantes: diffDias,
         es_hoy: diffDias === 0,

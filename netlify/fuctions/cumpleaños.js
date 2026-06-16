@@ -12,7 +12,7 @@ exports.handler = async function () {
     });
 
     const [rows] = await connection.execute(
-      'SELECT nombre, fecha_nacimiento FROM empleados WHERE fecha_nacimiento IS NOT NULL'
+      "SELECT apellido_nombre, fecha_nacimiento FROM snuempleados WHERE borrado <> 'S'"
     );
 
     const hoy = new Date();

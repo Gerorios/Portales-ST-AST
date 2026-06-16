@@ -21,7 +21,7 @@
   const track = document.getElementById('birthdaysTrack');
   const count = document.getElementById('birthdaysCount');
   try {
-    const res = await fetch('/.netlify/functions/cumpleanos');
+    const res = await fetch('/.netlify/functions/cumpleaños');
     const data = await res.json();
     track.innerHTML = '';
     count.textContent = data.length;

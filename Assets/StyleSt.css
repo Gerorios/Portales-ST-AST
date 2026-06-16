@@ -515,3 +515,11 @@ body {
   .hero-title { font-size: 28px; }
   .footer { padding: 14px 20px; flex-direction: column; gap: 6px; text-align: center; }
 }
+.birthdays-bar { padding: 16px 32px 8px; }
+.birthdays-track { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px; }
+.birthday-card { flex: 0 0 150px; background: var(--card-bg, #fff); border: 1px solid var(--border-color, #e5e5e5); border-radius: 10px; padding: 12px; }
+.birthday-card.is-today { border-color: #1D9E75; background: rgba(29,158,117,0.08); }
+.birthday-name { font-weight: 600; font-size: 13px; }
+.birthday-date { font-size: 12px; color: #888; margin-top: 2px; }
+.birthday-days { font-size: 11px; margin-top: 6px; font-weight: 700; color: #1D9E75; }
+.birthday-error { font-size: 12px; color: #999; }

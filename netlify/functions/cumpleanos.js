@@ -15,7 +15,8 @@ exports.handler = async function () {
       `SELECT apellido_nombre, fecha_nacimiento FROM snuempleados
        WHERE borrado <> 'S'
        AND fecha_nacimiento IS NOT NULL
-       AND fecha_nacimiento > '1900-01-01'`
+       AND fecha_nacimiento > '1900-01-01'
+       AND activo <> 'N'`
     );
 
     const hoy = new Date();
